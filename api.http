@@ -1,0 +1,32 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": 123,
+  "details": null,
+  "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/32d5d61f-536e-4ca7-af8c-50d4be6c05b4/attendees
+Content-Type: application/json
+
+{
+  "name": "Diego Fernandes",
+  "email": "diego2@rocketseat.com.br"
+}
+
+###
+GET http://localhost:3333/events/32d5d61f-536e-4ca7-af8c-50d4be6c05b4
+
+###
+GET http://localhost:3333/attendees/2/badge 
+
+// nanoid - biblioteca para ids incrementais sensiveis
+
+###
+GET http://localhost:3333/attendees/4/check-in
+
+###
+GET http://localhost:3333/events/32d5d61f-536e-4ca7-af8c-50d4be6c05b4/attendees?query=diego
