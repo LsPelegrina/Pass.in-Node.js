@@ -1,0 +1,49 @@
+Node.js - NLW Unite
+
+Instalar node.js
+
+Instalar Typescript - npm i typescript @types/node -D(Dependencias de desenvolvimento, ou seja, em prod não precisa)
+
+npx tsc --init -> criar tsconfig.json
+
+acessar repositorio do tsconfig bases -> pegar a versão do node, e colar no .json. (https://www.npmjs.com/package/@tsconfig/node20)
+
+incluir pasta de arquivos typescript
+
+npx tsc -> converter ts em js
+
+npm i tsx -D -> dependencia para rodar o server, sem mostrar a conversão de ts para js, "por baixo dos panos"
+
+npx tsx (watch) [local do server] -> roda o server - se existir o watch ele funciona como um live server.
+
+adicionar em scripts no package.json 
+
+npm run dev - executa scripts do package, no caso a dev que é para o comando do tsx
+
+npm i fastify -> instalar microframework para node, criação de rotas, API's
+
+SOAP, REST, RESTFUL
+
+npm i prisma -D -> ORM
+
+npx prisma init --datasource-provider SQLite - determinar o banco de dados -> sqlite salva em arquivo fisico
+
+npx prisma migrate dev -> fazer alterações no db, como se fosse um commit
+
+npx prisma studio -> visualizar db / gerenciar
+
+rest client para verificar rotas
+
+npm i zod -> validação de erros request.body
+
+npm i fastify-type-provider-zod validação de erros all requests
+
+npm i @fastify/swagger -> baixar swagger para doc
+
+npm i @fastify/swagger-ui -> interface 
+
+npm i @fastify/cors -> configurar aplicações que podem fazer requisições para api
+
+
+
+
