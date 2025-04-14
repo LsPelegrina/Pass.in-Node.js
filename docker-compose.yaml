@@ -2,6 +2,18 @@ version: '3.8'
 
 services:
 
+  postgres:
+    image: postgres:17.4-alpine3.21
+    container_name: db_pass.in
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pass.in
+    networks:
+      - pass.in 
+
   api-pass.in:
     build: 
       context: .
@@ -9,5 +21,12 @@ services:
     ports:
       - "3333:3333"
     environment:
-      - DATABASE_URL=file:./db.sqlite
-    
+      - DATABASE_URL=postgres://user:password@postgres:5432/pass.in
+    depends_on:
+      - postgres
+    networks:
+      - pass.in
+
+networks:
+  pass.in:
+    driver: bridge
