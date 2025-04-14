@@ -1,0 +1,12 @@
+.git*
+node_modules
+README.md
+.gitignore
+Dockerfile
+api.http
+dist
+.env
+docker-compose.yaml
+erd.svg
+Node.js - NLW Unite.txt
+.dockerignore
