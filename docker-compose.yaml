@@ -11,6 +11,8 @@ services:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
       POSTGRES_DB: pass.in
+    volumes:
+      - 'db:/var/lib/postgresql/data'
     networks:
       - pass.in 
 
@@ -30,3 +32,6 @@ services:
 networks:
   pass.in:
     driver: bridge
+
+volumes:
+  db:
